@@ -217,6 +217,14 @@ footer a:hover{color:var(--accent2)}
   footer{flex-direction:column;gap:1rem;text-align:center}
 }
 </style>
+
+<style>
+.nav-logo img:hover {
+  border-color: var(--accent3);
+  box-shadow: 0 0 12px rgba(167,139,250,0.5);
+}
+</style>
+
 </head>
 <body>
 
@@ -224,7 +232,9 @@ footer a:hover{color:var(--accent2)}
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">ELG.</a>
+  <a href="#hero" class="nav-logo">
+  <img src="avatar.jpg" alt="Evon" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--accent2);transition:border-color 0.3s;display:block;"/>
+  </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -249,8 +259,8 @@ footer a:hover{color:var(--accent2)}
         <span class="hero-name-plain">Evon L.</span>
         <span class="hero-name-grad">Granaderos</span>
       </h1>
-      <p class="hero-role">IT Student &nbsp;·&nbsp; Game Developer &nbsp;·&nbsp; 3D Artist</p>
-      <p class="hero-desc">Combining technical problem-solving with creative design — from intelligent game systems to immersive 3D environments and AI-powered platforms.</p>
+      <p class="hero-role">IT Student &nbsp;·&nbsp; Fronend Developer &nbsp;·&nbsp; 3D Artist</p>
+      <p class="hero-desc">Hi! I'm Evon, a 4th year IT student at Davao del Norte State College passionate about frontend development, 3D design, and AI-powered applications. I'm currently finishing my capstone — a gamified 3D study environment for junior high school students.</p>
       <div class="hero-btns">
         <a href="#capstone" class="btn btn-primary">View Capstone ↓</a>
         <a href="#projects" class="btn btn-ghost">Projects</a>
@@ -261,6 +271,10 @@ footer a:hover{color:var(--accent2)}
       <div class="hero-card">
         <p class="hero-card-title">Quick Info</p>
         <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div><span class="info-label">Location</span><span class="info-val">Davao del Norte, Philippines</span></div>
+        </div>
+        <div class="info-row">
           <div class="info-icon">🎓</div>
           <div><span class="info-label">School</span><span class="info-val">Davao del Norte State College</span></div>
         </div>
@@ -270,15 +284,11 @@ footer a:hover{color:var(--accent2)}
         </div>
         <div class="info-row">
           <div class="info-icon">🎮</div>
-          <div><span class="info-label">Specialty</span><span class="info-val">Game Dev & 3D Design</span></div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon">📍</div>
-          <div><span class="info-label">Location</span><span class="info-val">Davao del Norte, Philippines</span></div>
+          <div><span class="info-label">Specialty</span><span class="info-val">Frontend Development</span></div>
         </div>
         <div class="info-row">
           <div class="info-icon">🤖</div>
-          <div><span class="info-label">Interest</span><span class="info-val">AI Integration & EdTech</span></div>
+          <div><span class="info-label">Interest</span><span class="info-val">Game Development, AI Integration & 3d Modeling</span></div>
         </div>
         <div><span class="hero-badge"><span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block"></span>Open to Collaborations</span></div>
       </div>
@@ -298,7 +308,7 @@ footer a:hover{color:var(--accent2)}
     <div class="skill-card">
       <span class="skill-icon">🎮</span>
       <p class="skill-cat">Game Development</p>
-      <p class="skill-name">Godot Engine 4</p>
+      <p class="skill-name">Godot Engine 3</p>
       <p class="skill-desc">Building interactive 3D/2D games and systems using GDScript</p>
     </div>
     <div class="skill-card">
@@ -339,7 +349,7 @@ footer a:hover{color:var(--accent2)}
 <!-- CAPSTONE -->
 <div class="section-wrap" id="capstone">
   <div class="reveal">
-    <p class="section-label">Main Project</p>
+    <p class="section-label">Ongoing Project</p>
     <h2 class="section-title">Capstone <span>Project</span></h2>
   </div>
   <div class="capstone-wrap reveal">
@@ -356,14 +366,14 @@ footer a:hover{color:var(--accent2)}
           <h3 class="capstone-title">Gamified 3D Study Environment with AI Virtual Assistant</h3>
           <p class="capstone-sub">For Junior High School English Learners</p>
           <div class="capstone-meta">
-            <span class="meta-pill">🎮 Godot 4</span>
+            <span class="meta-pill">🎮 Godot 3</span>
             <span class="meta-pill">🤖 AI-Powered</span>
             <span class="meta-pill">📚 EdTech</span>
             <span class="meta-pill">🏫 JHS Students</span>
           </div>
-          <p class="capstone-desc">A fully interactive 3D educational platform designed to make English learning engaging for Grades 7–10 students. Built in Godot 4 with an AI-powered virtual assistant, game-based activities, and an in-game PDF viewer — connected to a Python/Flask backend.</p>
+          <p class="capstone-desc">An ongoing development interactive 3D educational platform designed to make English learning engaging for Grades 7–10 students. Built in Godot 3 with an AI-powered virtual assistant, game-based activities, and an in-game PDF viewer — connected to a Python/Flask backend.</p>
           <div class="capstone-stack">
-            <span class="tag">Godot 4</span>
+            <span class="tag">Godot 3</span>
             <span class="tag">GDScript</span>
             <span class="tag">Python</span>
             <span class="tag">Flask</span>
@@ -378,17 +388,16 @@ footer a:hover{color:var(--accent2)}
           <div class="feature"><div class="fdot"></div>AI Virtual Assistant powered by the Groq API</div>
           <div class="feature"><div class="fdot"></div>Word Search, Flashcards & Fill-in-the-Blanks mini-games</div>
           <div class="feature"><div class="fdot"></div>In-game PDF Module Viewer via Python & Poppler</div>
-          <div class="feature"><div class="fdot"></div>Grade 7–10 English lesson browser (PreloadedPanel)</div>
+          <div class="feature"><div class="fdot"></div>Grade 7–10 English lesson browser</div>
           <div class="feature"><div class="fdot"></div>AI-powered module upload validation</div>
           <div class="feature"><div class="fdot"></div>Google OAuth login & session management</div>
-          <div class="feature"><div class="fdot"></div>Dynamic chat UI with AI bubble layout</div>
         </div>
       </div>
       <div class="capstone-imgs">
         <p class="capstone-imgs-label">Screenshots</p>
         <!-- Replace src with your actual capstone screenshots -->
         <div class="img-main">
-          <img src="https://placehold.co/900x420/0d0d1a/a78bfa?text=📸+Capstone+Main+Screenshot" alt="Capstone main screenshot"/>
+          <img src="capstoneMainSS.png" alt="Capstone main screenshot"/>
         </div>
         <div class="img-row">
           <div class="img-sm"><img src="https://placehold.co/440x240/0d0d1a/7c6ff7?text=📸+Screenshot+2" alt="Capstone screenshot 2"/></div>
@@ -489,29 +498,7 @@ footer a:hover{color:var(--accent2)}
 
 <!-- STATS -->
 <div class="section-wrap" id="about">
-  <div class="reveal">
-    <p class="section-label">Activity</p>
-    <h2 class="section-title">GitHub <span>Stats</span></h2>
-  </div>
-  <div class="stats-grid reveal">
-    <div class="stat-card">
-      <div class="stat-img-wrap">
-        <img src="https://github-readme-stats.vercel.app/api?username=eVonCode&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=a78bfa&icon_color=7c6ff7&text_color=9898b8" width="100%"/>
-      </div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-img-wrap">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=eVonCode&theme=tokyonight&hide_border=true&background=00000000&ring=7c6ff7&fire=a78bfa&currStreakLabel=c9d1d9&sideLabels=a78bfa&dates=55556a" width="100%"/>
-      </div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-img-wrap">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eVonCode&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=9898b8" width="100%"/>
-      </div>
-    </div>
-  </div>
 
-  <br/><br/>
 
   <div class="reveal">
     <p class="section-label">Right Now</p>
@@ -520,11 +507,11 @@ footer a:hover{color:var(--accent2)}
   <div class="currently-grid reveal">
     <div class="current-card">
       <span class="current-icon">🔨</span>
-      <div><p class="current-label">Building</p><p class="current-val">Finishing capstone — Godot 4 + Flask + AI</p></div>
+      <div><p class="current-label">Building</p><p class="current-val">Finishing capstone — Godot 3 + Flask + AI</p></div>
     </div>
     <div class="current-card">
       <span class="current-icon">📖</span>
-      <div><p class="current-label">Learning</p><p class="current-val">Machine Learning & Data Science</p></div>
+      <div><p class="current-label">Learning</p><p class="current-val">Frontend & Game Development</p></div>
     </div>
     <div class="current-card">
       <span class="current-icon">🎮</span>
@@ -551,14 +538,14 @@ footer a:hover{color:var(--accent2)}
       <a href="https://github.com/eVonCode" target="_blank" class="btn btn-primary">View GitHub Profile ↗</a>
     </div>
     <div class="social-list">
-      <a href="https://facebook.com/YOUR_LINK_HERE" target="_blank" class="social-item">
+      <a href="https://www.facebook.com/evon.granaderos" target="_blank" class="social-item">
         <div class="social-icon">📘</div>
         <div><span class="social-label">Facebook</span><span class="social-val">Evon L. Granaderos</span></div>
         <span class="social-arrow">→</span>
       </a>
-      <a href="https://instagram.com/YOUR_LINK_HERE" target="_blank" class="social-item">
+      <a href="https://www.instagram.com/evonshh/" target="_blank" class="social-item">
         <div class="social-icon">📸</div>
-        <div><span class="social-label">Instagram</span><span class="social-val">@YOUR_USERNAME</span></div>
+        <div><span class="social-label">Instagram</span><span class="social-val">@evonshh</span></div>
         <span class="social-arrow">→</span>
       </a>
       <a href="https://github.com/eVonCode" target="_blank" class="social-item">
@@ -566,9 +553,9 @@ footer a:hover{color:var(--accent2)}
         <div><span class="social-label">GitHub</span><span class="social-val">eVonCode</span></div>
         <span class="social-arrow">→</span>
       </a>
-      <a href="mailto:YOUR_EMAIL_HERE" class="social-item">
+      <a href="mailto:granaderos.evon@dnsc.edu.ph" class="social-item">
         <div class="social-icon">✉️</div>
-        <div><span class="social-label">Email</span><span class="social-val">YOUR_EMAIL_HERE</span></div>
+        <div><span class="social-label">Email</span><span class="social-val">granaderos.evon@dnsc.edu.ph</span></div>
         <span class="social-arrow">→</span>
       </a>
     </div>
